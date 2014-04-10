@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Page Title</title>
+
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <script type="text/javascript" src="phonegap.js"></script>
+  <script type="text/javascript" src="js/index.js"></script>
+
+  <link rel="stylesheet" href="js/jquerymobile/jquery.mobile-1.4.2.min.css" />
+  <script src="js/jquery/jquery-2.1.0.min.js"></script>
+  <script src="js/jquerymobile/jquery.mobile-1.4.2.min.js"></script>
+</head>
+<body>
+
+<div data-role="page">
+
+  <div data-role="header">
+    <h1>glZepa v1.0</h1>
+    <a id="btnBluetooh" href="#" class="ui-btn-right">Bluetooth Connect</a>
+  </div><!-- /header -->
+
+  <div role="main" class="ui-content">
+    <div>
+      <div id="x" class="accel">0</div>
+      <div id="y" class="accel">0</div>
+      <div id="z" class="accel">0</div>
+    </div>
+    <hr>
+    <p>Dispositivos Bluetooh</p>
+    <hr>
+    <p id="bluelist"></p>
+  </div><!-- /content -->
+
+  <div data-role="footer" data-position="fixed" style="padding: 10px;">
+    <form>
+      <input type="range" name="slider-3" id="slider-3" min="0" max="255" value="0" data-show-value="true" data-popup-enabled="true">
+    </form>
+  </div>
+</div><!-- /page -->
+
+</body>
+</html>
+
+<script>
+  $(document).on('pageinit', function() {
+    app.initialize();
+  });
+</script>
